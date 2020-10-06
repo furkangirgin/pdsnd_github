@@ -126,7 +126,7 @@ def load_data(city, month, day):
     else:
         df = df[df['Weekday'] == day.title()]
 
-    print("\nThis took {} seconds.".format((time.time() - start_time)))
+    print("\nThis took {sec} seconds.".format(sec=(time.time() - start_time)))
     print('-'*40)
 
     return df
