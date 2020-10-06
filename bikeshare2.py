@@ -103,7 +103,7 @@ def load_data(city, month, day):
                                      'End Station', 'User Type', 'Gender',
                                      'Birth Year'])
         except:
-            pass
+            print("Exception has been occurred.")
     else:
         df = pd.read_csv(CITY_DATA[city])
 
@@ -126,7 +126,7 @@ def load_data(city, month, day):
     else:
         df = df[df['Weekday'] == day.title()]
 
-    print("\nThis took {} seconds.".format((time.time() - start_time)))
+    print("\nThis took {sec} seconds.".format(sec=(time.time() - start_time)))
     print('-'*40)
 
     return df
